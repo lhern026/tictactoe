@@ -12,14 +12,19 @@ const squares = [...document.querySelectorAll('#board > div')];
 const replayBtn = document.querySelector('button');
 
 /*----- event listeners -----*/
-// document.querySelectorAll('div')
-//   .addEventListener('click', evt);
-
+document.getElementById("board")
+    .addEventListener('click', handleDrop);
+ 
 // replayBtn.addEventListener('click', init);
 
 
 /*----- functions -----*/
 init();
+
+function handleDrop(evt){      
+    console.log(evt.target)
+
+}
 
 function init(){
     //initalize all state
