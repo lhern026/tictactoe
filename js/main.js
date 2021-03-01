@@ -1,5 +1,9 @@
 /*----- constants -----*/
-
+const mark = {
+    '0': 'empty',
+    '1': 'x',
+    '-1': 'o'
+}
 
 
 
@@ -40,5 +44,15 @@ function init(){
     render();
 }
 function render(){
+    //render the board
+    board.forEach(function(colArr, colIdx){
+        //iterate over the col array to access square value
+        colArr.forEach(function(squareValue, rowIdx){
+            const div = document.getElementById(`c${colIdx}r${rowIdx}`)
+            document.querySelector('div').innerHTML = mark[squareValue]
+        })
+        
+    });
+        
 
 }
